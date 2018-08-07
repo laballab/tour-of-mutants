@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Villain } from '../villain';
+import { VILLAINS } from '../mock';
 
 @Component({
   selector: 'app-villains',
@@ -8,11 +9,12 @@ import { Villain } from '../villain';
 })
 
 export class VillainsComponent implements OnInit {
-  villain: Villain = {
-    id: 2,
-    name: 'Magneto',
-    power: 108
-  };
+  villains: Villain[] = VILLAINS;
+  selectedVillain: Villain;
+
+  onSelect(villain: Villain): void {
+    this.selectedVillain = villain;
+  }
 
   constructor() { }
 
