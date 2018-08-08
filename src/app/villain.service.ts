@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { Villain } from './villain';
 import { VILLAINS } from './mock';
 
@@ -6,8 +7,8 @@ import { VILLAINS } from './mock';
   providedIn: 'root'
 })
 export class VillainService {
-  getVillains(): Villain[] {
-    return VILLAINS;
+  getVillains(): Observable<Villain[]> {
+    return of(VILLAINS);
   }
 
   constructor() { }
