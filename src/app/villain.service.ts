@@ -14,5 +14,11 @@ export class VillainService {
     return of(VILLAINS);
   }
 
+  getVillain(id: number): Observable<Villain> {
+    // TODO: send the message _after_ fetching the hero
+    this.messageService.add(`VillainService: fetched villain id=${id}`);
+    return of(VILLAINS.find(villain => villain.id === id));
+  }
+
   constructor(private messageService: MessageService) { }
 }

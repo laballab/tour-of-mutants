@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: 'villains', component: VillainsComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'heroes/detail/:id', component: HeroDetailComponent },
-  { path: 'villains/detail/:id', component: VillainDetailComponent },
+  { path: 'heroDetail/:id', component: HeroDetailComponent },
+  { path: 'villainDetail/:id', component: VillainDetailComponent },
 ];
 
 @NgModule({

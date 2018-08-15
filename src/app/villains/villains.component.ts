@@ -10,7 +10,6 @@ import { Villain } from '../villain';
 
 export class VillainsComponent implements OnInit {
   villains: Villain[];
-  selectedVillain: Villain;
 
   constructor(private villainService: VillainService) { }
 
@@ -18,14 +17,8 @@ export class VillainsComponent implements OnInit {
     this.getVillains();
   }
 
-
-  onSelect(villain: Villain): void {
-    this.selectedVillain = villain;
-  }
-
   getVillains(): void {
     this.villainService.getVillains()
     .subscribe(villains => this.villains = villains);
   }
-
 }
