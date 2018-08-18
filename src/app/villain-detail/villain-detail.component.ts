@@ -27,5 +27,9 @@ export class VillainDetailComponent implements OnInit {
     this.heroService.getVillain(id)
     .subscribe(villain => this.villain = villain);
   }
+
+  goBack(): void {
+    this.location.back();
+  }
 }
 

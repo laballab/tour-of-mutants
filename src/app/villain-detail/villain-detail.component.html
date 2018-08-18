@@ -3,7 +3,8 @@
   <div><span>ID: </span>{{villain.id}}</div>
   <div>
     <label>Name:
-      <input [(ngModel)]="villain.name" placeholder="name">
+      <div><input [(ngModel)]="villain.name" placeholder="name"></div>
+      <div><button (click)=goBack()>Go back</button></div>
     </label>
   </div>
 </div>
